@@ -1,0 +1,19 @@
+{
+  "name": "API",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Juliano Costa Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
