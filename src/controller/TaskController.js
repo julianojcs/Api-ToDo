@@ -6,10 +6,20 @@ class TaskController {
     const task = new TaskModel(req.body)
     await task
       .save()
+      .then((response) => {
+        return res.status(200).json(response)
+      })
+      .catch((error) => {
+        return res.status(500).json(error)
+      })
+  }
+
+  async update(req, res) {
+    await TaskModel.findByIdAndUpdate({'_id': req.params.id}, req.body, {new: true})
       .then(response => {
         return res.status(200).json(response)
       })
-      .catch(error => {
+      .catch((error) => {
         return res.status(500).json(error)
       })
   }

@@ -7,5 +7,6 @@ const TaskValidation = require('../middlewares/TaskValidation')
 //! Passa apenas '/', pois o '/task' já está sendo 
 //! informado na chamada da rota no src/index.js
 router.post('/', TaskValidation, TaskController.create)
+router.put('/:id', TaskController.update)
 
 module.exports = router
